@@ -2,8 +2,8 @@
 $fa = 8;
 $fs = 0.4;
 
-include <lily58plate_slot.scad>
-include <module-bevelextrude.scad>
+use <lily58plate_slot.scad>
+use <module-bevelextrude.scad>
 
 
 module bolt() {
@@ -72,5 +72,7 @@ module plate() {
     }
 }
 
-// Correction: 0% infill, ABS
+// Correction: 0% infill, PETG, Rev 1
 scale(1.007, 1.007) plate();
+// Correction: 0% infill, PETG
+//scale([1.004, 1.004, 0.004]) plate();

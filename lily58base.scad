@@ -4,22 +4,29 @@ $fs = 0.4;
 
 tilted = false;
 
-include <module-bevelextrude.scad>
+use <module-bevelextrude.scad>
 
 
 module bolt() {
     translate([0, 0, 0]) cylinder(12, d=2.4);
-    translate([0, 0, 0]) cylinder(2, d=4.2, $fn=6);
+    translate([0, 0, 0]) cylinder(2, d=4.7, $fn=6);
     //translate([0, 0, -2]) cylinder(2, d=4.2);
-    translate([0, 0, -2]) cylinder(2, d=4.2, $fn=6);
+    translate([0, 0, -2]) cylinder(2, d=4.7, $fn=6);
 }
 
 module slot_keepout() {
     translate([-18/2, 0, -1.75]) cube([18, 7, 1.75]);
+    // Switch
+    translate([-18/2, -10/2, -1.75]) cube([18, 10, 1.75]);
 }
 
 module base() {
-    //translate([0, 0, 0]) /*linear_extrude(6)*/ import("lily58-F_Cu.svg", $fn=8);
+    /*
+    translate([0, 0, 0]) color("blue", 0.2) {
+        linear_extrude(0.1) import("lily58-B_Cu.svg", $fn=8);
+        linear_extrude(0.1) import("lily58-F_Cu.svg", $fn=8);
+    }
+    */
     difference() {
         if (tilted) {
             // Tilted
@@ -66,27 +73,27 @@ module base() {
         translate([168.1, y_cmp-123.75, 0]) slot_keepout();
         
         // Diodes
-        translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-        translate([135.3, y_cmp-58.7+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-        translate([134.3, y_cmp-55.7+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-        translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-        translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-        translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-        translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
+        translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+        translate([135.3, y_cmp-60.2+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+        translate([134.3, y_cmp-57.2+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+        translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+        translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+        translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+        translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
         translate([0, -38.1, 0]) {
-            translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-            translate([135.3, y_cmp-58.7+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-            translate([134.3, y_cmp-55.7+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-            translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-            translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-            translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
-            translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -1.5/2]) cube([7, 6, 1.5], center=true);
+            translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+            translate([135.3, y_cmp-60.2+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+            translate([134.3, y_cmp-57.2+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+            translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+            translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+            translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
+            translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -1.75/2]) cube([7, 6, 1.75], center=true);
         }
-        translate([123.9, y_cmp-118, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-        translate([142.9, y_cmp-115.8, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-        translate([162, y_cmp-115.8, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-        translate([109.8, y_cmp-119.3, 0]) rotate([0, 0, -60]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
-        translate([105.6, y_cmp-89.5, 0]) translate([0, 0, -1.5/2]) cube([7, 3, 1.5], center=true);
+        translate([123.9, y_cmp-118, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+        translate([142.9, y_cmp-115.8, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+        translate([162, y_cmp-115.8, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+        translate([109.8, y_cmp-119.3, 0]) rotate([0, 0, -60]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
+        translate([105.6, y_cmp-89.5, 0]) translate([0, 0, -1.75/2]) cube([7, 3, 1.75], center=true);
         
         // Controller
         translate([83, y_cmp-52.58, -2]) cube([8, 11.5, 3]);
@@ -94,8 +101,8 @@ module base() {
         translate([95, y_cmp-76, -2]) cube([11, 3, 3]);
         
         // Cover
-        translate([108, y_cmp-85, -3.5]) cylinder(4, d=4.2, $fn=6);
-        translate([86, y_cmp-85, -3.5]) cylinder(4, d=4.2, $fn=6);
+        translate([108, y_cmp-85, -3.5]) cylinder(4, d=4.7, $fn=6);
+        translate([86, y_cmp-85, -3.5]) cylinder(4, d=4.7, $fn=6);
         
         // Bolts
         translate([105, y_cmp-114.8, -4]) bolt();
@@ -106,5 +113,8 @@ module base() {
     }
 }
 
-// Correction: 0% infill, ABS
-scale(1.007, 1.007) base();
+// Correction: 0% infill, PETG, Rev 1
+scale([1.007, 1.007, 1.007]) base();
+//scale(1.007, 1.007) base();
+// Correction: 0% infill, PETG
+//scale([1.004, 1.004, 0.004]) base();

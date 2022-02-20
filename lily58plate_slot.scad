@@ -1,4 +1,5 @@
-include <BOSL/shapes.scad>
+include <BOSL/constants.scad>
+use <BOSL/shapes.scad>
 
 upper_plate = 1.5;
 height = 5;
@@ -21,4 +22,4 @@ module slot_demo() {
     }
 }
 
-//slot_demo();
+slot_demo();
