@@ -3,6 +3,11 @@
 
 3D printable plate and base for the Lily58 Pro.
 
+Goals:
+
+- Portable, not take up too much space in my bag
+- Low profile while using full-size switches
+
 ## Hardware
 
 You'll need the models printed, plus these parts per side:
@@ -12,7 +17,9 @@ You'll need the models printed, plus these parts per side:
   - Button/pan head bolts work well. A whole set of M2 bolts of different lengths is pretty affordable
   - Please check the 3D models again before buying specific lengths, I am unsure if this is the right lengths
 
-## Photos
+## Media
+
+I did a [talk on this at Hackware v7.3](https://www.youtube.com/watch?v=zgcLRntWxqA).
 
 <img src="photos/desk.jpg" width="560"/>
 
