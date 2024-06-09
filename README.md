@@ -21,6 +21,8 @@ You'll need the models printed, plus these parts per side:
 
 I did a [talk on this at Hackware v7.3](https://www.youtube.com/watch?v=zgcLRntWxqA).
 
+Submit photos of your own prints on [GitHub Discussions](https://github.com/serverwentdown/lily58-3d/discussions/new?category=show-and-tell&title=Here%27s%20my%20print!)!
+
 <img src="photos/desk.jpg" width="560"/>
 
 <img src="photos/cover.jpg" width="480"/>
@@ -28,7 +30,5 @@ I did a [talk on this at Hackware v7.3](https://www.youtube.com/watch?v=zgcLRntW
 <img src="photos/side.jpg" width="560"/>
 
 <img src="photos/socket.jpg" width="480"/>
-
-Submit photos of your own prints on [GitHub Discussions](https://github.com/serverwentdown/lily58-3d/discussions/new?category=show-and-tell&title=Here%27s%20my%20print!)!
 
 <!-- vim: set conceallevel=2 et ts=2 sw=2: -->
