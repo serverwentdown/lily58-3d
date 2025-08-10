@@ -2,18 +2,21 @@
 $fa = 8;
 $fs = 0.4;
 
+// Controller is socketed
+socketed = false;
+
 use <lily58plate.scad>
 use <lily58base.scad>
 
 include <BOSL/constants.scad>
 use <BOSL/shapes.scad>
 
-/*
+
 translate([-97, -125, 0]) color("blue", 0.2) {
 	linear_extrude(0.1) import("lily58-B_Cu.svg", $fn=8);
 	linear_extrude(0.1) import("lily58-F_Cu.svg", $fn=8);
 }
-*/
+
 
 difference() {
 	translate([-14.95, -2.8, -1.5]) cuboid([28.8, 48.8+2.8, 15+1.5], fillet=2, edges=EDGES_Z_ALL+EDGES_TOP, center=false);
@@ -32,7 +35,7 @@ difference() {
 			// Controller Cavity
 			cuboid([20, 40, 7.5], align=[0, 1, 1]);
 			// USB socket
-			translate([0, 40, 2]) cuboid([12, 6, 4], align=[0, 1, 1], fillet=2, edges=EDGES_Y_ALL);
+			translate([0, 40, socketed ? 2 : 0]) cuboid([12, 8, 4], align=[0, 1, 1], fillet=2, edges=EDGES_Y_ALL);
 
 			// Battery Cavity
 			translate([0, -3, 0]) cuboid([16, 43, 14.5], align=[0, 1, 1]);
