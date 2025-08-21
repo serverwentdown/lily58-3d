@@ -98,27 +98,27 @@ module base(low_profile = false) {
         
         // Diodes
         diode_thick = 1.4;
-        translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-        translate([135.3, y_cmp-60.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-        translate([134.3, y_cmp-57.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-        translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-        translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-        translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-        translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
+        translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+        translate([135.3, y_cmp-60.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+        translate([134.3, y_cmp-57.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+        translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+        translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+        translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+        translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
         translate([0, -38.1, 0]) {
-            translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-            translate([135.3, y_cmp-60.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-            translate([134.3, y_cmp-57.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-            translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-            translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-            translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
-            translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 6, diode_thick], center=true);
+            translate([114.5, y_cmp-61+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+            translate([135.3, y_cmp-60.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+            translate([134.3, y_cmp-57.2+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+            translate([152.6, y_cmp-57.4+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+            translate([171.5, y_cmp-58.7+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+            translate([190.6, y_cmp-63.3+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
+            translate([221.8, y_cmp-64.9+1.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 6, diode_thick], center=true);
         }
-        translate([123.9, y_cmp-118, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-        translate([142.9, y_cmp-115.8, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-        translate([162, y_cmp-115.8, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-        translate([109.8, y_cmp-119.3, 0]) rotate([0, 0, -60]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
-        translate([105.6, y_cmp-89.5, 0]) translate([0, 0, -diode_thick/2]) cube([7, 3, diode_thick], center=true);
+        translate([123.9, y_cmp-118, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+        translate([142.9, y_cmp-115.8, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+        translate([162, y_cmp-115.8, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+        translate([109.8, y_cmp-119.3, 0]) rotate([0, 0, -60]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
+        translate([105.6, y_cmp-89.5, 0]) translate([0, 0, -diode_thick/2]) cube([6, 3, diode_thick], center=true);
         
         // Controller
         //translate([91, y_cmp-71.8, -1.75]) cube([19, 32, 3]); // Controller
