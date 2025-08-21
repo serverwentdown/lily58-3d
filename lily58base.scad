@@ -17,17 +17,17 @@ module bolt() {
 
 module slot_keepout(low_profile = false) {
     if (low_profile) {
-        translate([-16/2, -6.175, -1.75]) cube([16, 5, 1.75]);
-        translate([-18.75/2, -6.175+(5-2.5)/2, -1.75]) cube([18.75, 2.5, 1.75]);
-        translate([-6/2, -8.39, -1.75]) cube([6, 5, 1.75]);
-        translate([-8/2, -8.39+(5-2.5)/2, -1.75]) cube([8, 2.5, 1.75]);
+        translate([-16/2, -6.175, -1.8]) cube([16, 5, 1.8]);
+        translate([-18.75/2, -6.175+(5-2.5)/2, -1.8]) cube([18.75, 2.5, 1.8]);
+        translate([-6/2, -8.39, -1.8]) cube([6, 5, 1.8]);
+        translate([-8/2, -8.39+(5-2.5)/2, -1.8]) cube([8, 2.5, 1.8]);
     } else {
-        translate([-18/2, 0.25, -1.75]) cube([18, 7, 1.75]);
+        translate([-18/2, 0.25, -1.8]) cube([18, 7, 1.8]);
     }
     // Switch
-    translate([0, 0, -0.75]) cylinder(1.4, d=4.1, $fn=12);
-    translate([-5.35, 0, -0.75]) cylinder(1.4, d=2.3, $fn=12);
-    translate([5.35, 0, -0.75]) cylinder(1.4, d=2.3, $fn=12);
+    translate([0, 0, -1]) cylinder(1.4, d=4.1, $fn=12);
+    translate([-5.35, 0, -1]) cylinder(1.4, d=2.3, $fn=12);
+    translate([5.35, 0, -1]) cylinder(1.4, d=2.3, $fn=12);
 }
 
 module feet() {
@@ -42,24 +42,24 @@ module feet() {
 
 module base(low_profile = false) {
     thick = 2.2;
-    /*
+    
     translate([0, 0, 0]) color("blue", 0.2) {
         linear_extrude(0.1) import("lily58-B_Cu.svg", $fn=8);
         linear_extrude(0.1) import("lily58-F_Cu.svg", $fn=8);
     }
-    */
+    
     difference() {
         if (tilted) {
             // Tilted
             difference() {
-                translate([0, 0, -20]) bevel_extrude(20, bevel_depth=1, bottom=true) offset(0.8) import("lily58_BOTTOM-Frame.svg");
+                translate([0, 0, -20]) bevel_extrude(20, bevel_depth=1, bottom=true, $fn=32) offset(0.1) import("lily58_BOTTOM-Frame.svg");
                 translate([15, 0, -25]) translate([80, 60, 0]) cube([150, 150, 20]);
                 translate([0, 0, -45.7]) rotate([0, -6, 0]) translate([80, 60, 0]) cube([150, 150, 20]);
             }
         } else {
             // Flat
             difference() {
-                translate([0, 0, -thick]) bevel_extrude(thick, bevel_depth=0.5, bottom=true) offset(0.8) import("lily58_BOTTOM-Frame.svg");
+                translate([0, 0, -thick]) bevel_extrude(thick, bevel_depth=1, bottom=true, $fn=32) offset(0.1) import("lily58_BOTTOM-Frame.svg");
                 translate([0, 0, -thick]) feet();
             }
         }
@@ -124,7 +124,7 @@ module base(low_profile = false) {
         //translate([91, y_cmp-71.8, -1.75]) cube([19, 32, 3]); // Controller
         translate([91 + (19-3.75), y_cmp-71.8, -1.75]) cube([3.75, 32, 3]); // Controller
         translate([91, y_cmp-71.8, -1.75]) cube([3.75, 32, 3]); // Controller
-        translate([83.5, y_cmp-72.5, -1.75]) cube([3, 9.5, 3]); // Reset
+        translate([83.5, y_cmp-72.5, -1.75+0.4]) cube([3, 9.5, 3]); // Reset
         //translate([83.25, y_cmp-50.8, -1.5]) cube([7.5, 9.4, 3]); // Audio
         //translate([85, y_cmp-52.3, -1.5]) cube([4, 2.5, 3]); // Audio
         //translate([85.4, y_cmp-48.55, -0.75]) cube([3.25, 8.5, 3]); // Audio
@@ -143,8 +143,9 @@ module base(low_profile = false) {
     }
 }
 
+base(low_profile=low_profile);
 // Correction: 0% infill, PETG, Rev 1
-scale([1.007, 1.007, 1.007]) base(low_profile=low_profile);
+//scale([1.007, 1.007, 1.007]) base(low_profile=low_profile);
 //scale(1.007, 1.007) base();
 // Correction: 0% infill, PETG
 //scale([1.004, 1.004, 0.004]) base();

@@ -24,10 +24,11 @@ module bolt_notch() {
 module plate(low_profile = false) {
     depth = low_profile ? 2.2 : 5;
     shrink = 0.01;
-    //translate([0, -2, 0]) linear_extrude(6) import("lily58_TOP-B_Cu.svg");
+    //translate([0, -2, -1]) color("red") linear_extrude(0.1) import("lily58_TOP-B_Cu.svg");
+    //color("red") linear_extrude(0.1) import("lily58-F_Cu.svg", $fn=8);
     difference() {
         union() {
-            translate([0, -2, shrink]) bevel_extrude(depth-shrink*2, bevel_depth=1) offset(0.8) import("lily58_TOP-Frame.svg");
+            translate([0, -2, shrink]) bevel_extrude(depth-shrink*2, bevel_depth=1, $fn=32) offset(0.1) import("lily58_TOP-Frame.svg");
             translate([105, y_cmp-114.8, 0]) bolt_notch();
             translate([129.6, y_cmp-59.6, 0]) bolt_notch();
             translate([129.6, y_cmp-97.6, 0]) bolt_notch();
@@ -80,7 +81,8 @@ module plate(low_profile = false) {
     }
 }
 
+plate(low_profile=low_profile);
 // Correction: 0% infill, PETG, Rev 1
-scale([1.007, 1.007, 1.000]) plate(low_profile=low_profile);
+//scale([1.007, 1.007, 1.000]) plate(low_profile=low_profile);
 // Correction: 0% infill, PETG
 //scale([1.004, 1.004, 0.004]) plate();
